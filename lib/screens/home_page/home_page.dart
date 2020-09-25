@@ -1,8 +1,7 @@
-import 'dart:math';
-
 import 'package:flutter/material.dart';
 
 import '../../widgets/image_banner.dart';
+import '../../widgets/text_section.dart';
 
 class MyHomePage extends StatefulWidget {
   final String title;
@@ -46,11 +45,19 @@ class _MyHomePageState extends State<MyHomePage> {
         title: Text(_title),
       ),
       body: Column(
+        mainAxisAlignment: MainAxisAlignment.start,
+        crossAxisAlignment: CrossAxisAlignment.stretch,
         children: <Widget>[
           ImageBanner("assets/images/battleaxe.jpg"),
-          Text(
-            '$_counter',
-            style: Theme.of(context).textTheme.headline2,
+          Center(
+            child: Text(
+              '$_counter',
+              style: Theme.of(context).textTheme.headline2,
+            ),
+          ),
+          TextSection(
+            "I'm the title",
+            "i'm a hot body!!!",
           ),
         ],
       ),
